@@ -1,3 +1,5 @@
+import sys
+
 if __name__ == '__main__':
 
     sys.stdin = open("C:/input/통계학.txt", 'r')

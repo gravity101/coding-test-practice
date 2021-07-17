@@ -1,3 +1,5 @@
+import sys
+
 result = 0
 sys.stdin = open("C:/input/카드정렬.txt", 'r')
 n = int(input())
