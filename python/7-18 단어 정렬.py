@@ -3,8 +3,16 @@ import sys
 sys.stdin = open("C:/input/카드정렬.txt", 'r')
 n = int(input())
 
-word = {str(input()) for _ in range(n)}
+word = []
 
-word = sorted(word, key=lambda x : x[0])
+for _ in range(n):
+    tmp_word = str(input())
+    word_count = len(tmp_word)
+    word.append((word_count, tmp_word))
 
-print(sorted(word, key=lambda x : len(x)))
+word = list(set(word))
+
+word = sorted(word, key=lambda x : (x[0], x[1]))
+
+for i in range(len(word)):
+    print(word[i][1])
