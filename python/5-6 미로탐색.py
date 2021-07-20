@@ -1,3 +1,7 @@
+import sys
+
+sys.stdin = open("C:/input/카드정렬.txt", 'r')
+
 n, m = map(int, input().split())
 s = []
 queue = []
@@ -6,7 +10,10 @@ dy = [0, 0, -1, 1]
 for i in range(n):
     s.append(list(input()))
 queue = [[0, 0]]
+print(s)
 s[0][0] = 1
+
+print(s)
 while queue:
     a, b = queue[0][0], queue[0][1]
     del queue[0]
@@ -16,3 +23,5 @@ while queue:
         if 0 <= x < n and 0 <= y < m and s[x][y] == "1":
             queue.append([x, y])
             s[x][y] = s[a][b] + 1
+
+print(s)
